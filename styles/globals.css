@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-gray-100;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  @apply mob:w-[min(55rem,_100%)] tablet:w-[min(62rem,_100%)]  pc:w-[min(78rem,_100%)] mx-auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
