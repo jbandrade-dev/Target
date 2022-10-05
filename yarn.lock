@@ -2306,11 +2306,6 @@
   "resolved" "https://registry.npmjs.org/vis-data/-/vis-data-7.1.4.tgz"
   "version" "7.1.4"
 
-"vis-timeline@^7.7.0":
-  "integrity" "sha512-et5xobQTEp7i8lqcEjgMWoGE4s4qn+2VtEJ35uRZiL5Y3qRzi84bCTkUKAjOM/HTzVFiLTWET+DZZi1iHYriuA=="
-  "resolved" "https://registry.npmjs.org/vis-timeline/-/vis-timeline-7.7.0.tgz"
-  "version" "7.7.0"
-
 "vis-util@^3.0.0 || ^4.0.0 || ^5.0.0", "vis-util@^4.0.0 || ^5.0.0":
   "integrity" "sha512-Wf9STUcFrDzK4/Zr7B6epW2Kvm3ORNWF+WiwEz2dpf5RdWkLUXFSbLcuB88n1W6tCdFwVN+v3V4/Xmn9PeL39g=="
   "resolved" "https://registry.npmjs.org/vis-util/-/vis-util-5.0.3.tgz"
