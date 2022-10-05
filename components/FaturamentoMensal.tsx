@@ -198,7 +198,7 @@ export function FaturamentoMensal() {
               <div>
                 <Disclosure.Button className="flex gap-1 rounded-lg text-lg">
                   <h2 className="text-gray-100 uppercase font-bold">
-                    Representatividade por estado
+                    Dias com faturamento superior a média
                   </h2>
                   <CaretDown
                     className={`${
