@@ -139,7 +139,7 @@ const diasSuperioresAMedia = faturamentoMensal.filter((item) => {
 
 export function FaturamentoMensal() {
   return (
-    <div className="mt-10 px-4">
+    <div className="flex flex-col mt-10 px-4 wrapper">
       <NumberCircleThree size={32} />
       <div className="flex text-gray-900 flex-col gap-2 mt-4">
         <div className="flex items-center gap-2 ">
@@ -209,7 +209,7 @@ export function FaturamentoMensal() {
 
                 <Disclosure.Panel className="flex text-gray-100">
                   <div className="mt-2 rounded-md text-gray-900 ml-1">
-                    <div className="grid grid-cols-8 gap-3">
+                    <div className="grid w-full pc:flex tablet:grid-cols-6 mob:grid-cols-4 gap-3">
                       {diasSuperioresAMedia.map((item) => {
                         return (
                           <CardFaturamento key={item.dia} content={item} />
