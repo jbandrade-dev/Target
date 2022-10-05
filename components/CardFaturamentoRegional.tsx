@@ -23,7 +23,7 @@ export function CardFaturamentoRegional({
       <div className="flex flex-col gap-3">
         {porcentagem.map((item) => {
           return (
-            <div className="flex flex-col">
+            <div key={item} className="flex flex-col">
               <span className="bg-gray-100 rounded-md text-lg p-2">
                 {item}%
               </span>
