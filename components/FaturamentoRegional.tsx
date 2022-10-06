@@ -46,7 +46,6 @@ export function FaturamentoRegional() {
             </Disclosure.Button>
 
             <Disclosure.Panel className="flex max-h-[500px] text-gray-100">
-              
               <svg viewBox="0 0 400 400">
                 <VictoryPie
                   standalone={false}
