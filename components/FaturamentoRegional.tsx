@@ -1,6 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { CaretDown, NumberCircleFour } from "phosphor-react";
-import { CardFaturamentoRegional } from "./CardFaturamentoRegional";
+import { VictoryLabel, VictoryPie } from "victory";
 
 const faturamentoRegional = [
   { estado: "São Paulo", faturamento: 67.836 },
@@ -45,13 +45,74 @@ export function FaturamentoRegional() {
               />
             </Disclosure.Button>
 
-            <Disclosure.Panel className="flex text-gray-100">
-              <div className="w-full text-center mt-2 rounded-md text-gray-900 ml-1">
-                <CardFaturamentoRegional
-                  estados={estados}
-                  porcentagem={porcentagem}
+            <Disclosure.Panel className="flex max-h-[500px] text-gray-100">
+              
+              <svg viewBox="0 0 400 400">
+                <VictoryPie
+                  standalone={false}
+                  width={400}
+                  height={400}
+                  data={[
+                    {
+                      x: `SP-${porcentagem[0]}%`,
+                      y: porcentagem[0],
+                      fill: "blue",
+                    },
+                    {
+                      x: `RJ-${porcentagem[1]}%`,
+                      y: porcentagem[1],
+                      fill: "purple",
+                    },
+                    {
+                      x: `MG-${porcentagem[2]}%`,
+                      y: porcentagem[2],
+                      fill: "red",
+                    },
+                    {
+                      x: `ES-${porcentagem[3]}%`,
+                      y: porcentagem[3],
+                      fill: "orange",
+                    },
+                    {
+                      x: `OU-${porcentagem[4]}%`,
+                      y: porcentagem[4],
+                      fill: "gray",
+                    },
+                  ]}
+                  innerRadius={50}
+                  labelRadius={80}
+                  style={{
+                    data: {
+                      fill: ({ datum }) => datum.fill,
+                    },
+                    labels: { fontSize: 12, fill: "white" },
+                  }}
                 />
-              </div>
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="45"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth={3}
+                />
+                <circle
+                  cx="200"
+                  cy="200"
+                  r="155"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth={3}
+                />
+                <VictoryLabel
+                  textAnchor="middle"
+                  verticalAnchor="middle"
+                  x={200}
+                  y={200}
+                  style={{ fontSize: 22, fill: "white" }}
+                  text="%"
+                />
+              </svg>
             </Disclosure.Panel>
           </div>
         )}
