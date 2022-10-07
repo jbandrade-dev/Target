@@ -51,6 +51,8 @@ export function Fibonacci() {
         <input
           className="w-[50%] rounded-md px-2 text-gray-900 placeholder:text-xs"
           type="number"
+          min={0}
+          max={1000}
           placeholder="Insira um número de entre 0 e 1000:"
           value={number}
           onChange={handleChange}
